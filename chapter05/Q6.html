@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            margin-top: 20px;
+        }
+        @keyframes test1{
+            0%{transform: rotate(0deg);}
+            100%{transform: rotate(360deg);}
+        }
+        @keyframes test2{
+            0%{transform: rotate(-90deg);}
+            100%{transform: rotate(90deg);}
+        }
+        .img1{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            animation-name: test1;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .img2{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            animation-name: test2;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+    </style>
+</head>
+<body>
+    <h1>어지러워요</h1>
+    <hr>
+    <div>
+        <div class="img1"></div>
+    </div>
+    <div>
+        <div class="img2"></div>
+    </div>
+</body>
+</html>

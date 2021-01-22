@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>설문조사</title>
+    <style>
+        div{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body style="font-size: 18px;">
+    <h1>설문지</h1>
+    <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다</p>
+    <hr>
+    <form action="" method="get">
+       <div>
+        학년
+        <label for="class1">
+        <input type="radio" name="grade" id="class1">
+            1학년 
+        </label>
+        <label for="class2">
+        <input type="radio" name="grade" id="class2">
+        2학년 
+        </label>
+        <input type="radio" name="grade" id="class3">
+        <label for="class3">3학년 
+        </label>
+        <input type="radio" name="grade" id="class4">
+        <label for="class4">4학년 
+        </label>
+    </div>
+    <div>
+        성별
+        <label ><input type="radio" name="gender" id="">남</label>
+        <label ><input type="radio" name="gender" id="">여</label>
+    </div>
+    <div>
+        관심분야
+        <select name="softwareList" id="">
+            <option value="1">모바일 소프트웨어</option>
+            <option value="2"> 소프트웨어</option>
+            <option value="3">모바일 </option>
+        </select>
+    </div>
+    <div>
+        진로
+        <label ><input type="checkbox" name="" id="">개발</label>
+        <label ><input type="checkbox" name="" id="">기획</label>
+        <label ><input type="checkbox" name="" id="">영업</label>
+        <label ><input type="checkbox" name="" id="">창업</label>
+
+    </div>
+    <div>
+        남기고 싶은말<br>
+        <textarea name="" id="" cols="30" rows="10" placeholder="글을 남겨주세요"></textarea>
+    </div>
+</form>
+</body>
+</html>
