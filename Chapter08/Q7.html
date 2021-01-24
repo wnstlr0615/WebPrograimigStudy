@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #image1,#image2{
+            width: 150px;
+            height: 150px;
+            background: aquamarine;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 120px;
+        }
+        #deg{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<h1>클릭하면 90도 회전합니다</h1>
+<hr>
+<div id="image1">↑</div>
+<div id="image2">↑</div>
+<div id="deg">0</div>
+<script>
+    const box1=document.getElementById("image1");
+    box1.onclick=()=>{
+        box1.style.transform="rotate(90deg)";
+    }
+    const box2=document.getElementById("image2");
+    box2.onclick=()=>{
+        let  num= document.getElementById("deg");
+        let n=parseInt(num.innerText);
+        n=(n+1)%4;
+        num.innerText=n;
+        console.log(n);
+        let deg=(n*90);
+        box2.style.transform=`rotate(${deg}deg)`;
+    }
+</script>
+</body>
+</html>

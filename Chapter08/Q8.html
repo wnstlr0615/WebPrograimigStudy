@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #image1,#image2{
+            width: 150px;
+            height: 150px;
+            background: aquamarine;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 120px;
+        }
+        #scaleNum{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+<h1>클릭하면 2,3,4배 옆으로 늘어납니다. </h1>
+<hr>
+<div id="image1">↑</div>
+<div id="scaleNum">0</div>
+<script>
+    const image=document.getElementById("image1");
+    image.onclick=()=>{
+        let scaleNum=document.getElementById("scaleNum");
+        num=parseInt(scaleNum.innerText);
+        num=(num+1)%4
+        scaleNum.innerText=num;
+        console.log(num);
+        image.style.transform=`scaleX(${num+1})`;
+    }
+</script>
+</body>
+</html>

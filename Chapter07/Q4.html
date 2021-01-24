@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>일요일은 pink, 다른 요일은 gold 배경</h1>
+<hr>
+<script !src="">
+    let date=new Date();
+    let day=["일","월","화","수","목","금","토"];
+    document.body.style.backgroundColor=date.getDay()==0?"pink":"gold";
+    document.write("오늘 :"+ date.getDay()+"일, "+day[date.getDay()]+"요일");
+</script>
+</body>
+</html>

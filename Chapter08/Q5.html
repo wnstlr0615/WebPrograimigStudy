@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index 스타일 프로퍼티</title>
+    <style>
+        #main{position: absolute;}
+        .card{
+            top: 0;
+            left: 0;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 140px;
+            background: aquamarine;
+        }
+        img{position: absolute;}
+    </style>
+</head>
+<body>
+<h3>z-index 스타일 프로퍼티</h3>
+<div id="main">
+    <p class="card">스페이드A</p>
+    <p class="card">스페이드2</p>
+    <p class="card">스페이드3</p>
+    <p class="card">스페이드7</p>
+</div>
+<script>
+    let p=document.getElementsByTagName("p");
+    let main=document.getElementById("main");
+    for (let i = 0; i <p.length ; i++) {
+        p[i].style.zIndex=3-i;
+    }
+    main.addEventListener("click", ev => {
+        for (let i = 0; i <p.length ; i++) {
+            let zIdx=parseInt(p[i].style.zIndex)+1;
+            console.log(zIdx);
+            if(zIdx>=4){
+                p[i].style.zIndex=0;
+            }
+            else{
+                p[i].style.zIndex=zIdx;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

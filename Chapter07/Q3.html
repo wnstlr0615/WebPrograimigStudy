@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h1>오전이면 lightskyblue, 오후이면 orange 배경</h1>
+<hr>
+<script !src="">
+    let date=new Date();
+        document.body.style.backgroundColor=date.getHours()<12?"lightskyblue":"orange";
+        document.write("현재시간 : "+date.getHours()+"시"+date.getMinutes()+"분"+date.getSeconds()+"초");
+</script>
+</body>
+</html>

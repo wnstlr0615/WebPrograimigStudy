@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체만들기</title>
+</head>
+<body>
+<h1>Book 객체 배열만들기</h1>
+<hr>
+<script !src="">
+    let bookArray=new Array();
+    let maxPrice=0;
+    let maxPriceIdx=0;
+    for (let i = 0; i <5 ; i++) {
+        let str=prompt("콜마로,분리하면서 책제목, 저자 가격 순으로 입력").split(",")
+        let book=new Object();
+        book.title=str[0];
+        book.author=str[1];
+        book.price=str[2];
+        bookArray[i]=book;
+
+        if(maxPrice<book.price){
+            maxPriceIdx=i;
+            maxPrice=book.price;
+        }
+        document.write(`${book.author},${book.title},${book.price}<br>`)
+    }
+    document.write("<hr>")
+    document.write("가장 가격이 비싼책은 "+bookArray[maxPriceIdx].title);
+</script>
+</body>
+</html>

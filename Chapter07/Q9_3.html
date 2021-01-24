@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체만들기</title>
+</head>
+<body>
+<h1>객체만들기 - 프로토 타입</h1>
+<hr>
+<script !src="">
+    function Book(author,title, price){
+        this.author=author;
+        this.title=title;
+        this.price=price;
+    }
+    let book=new Book("황기태", "HTML5", 20000);
+    document.write(`book : ${book.author},${book.title},${book.price}`)
+</script>
+</body>
+</html>
